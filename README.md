@@ -5,8 +5,7 @@ https://www.kaggle.com/kmader/malaria-bounding-boxes
 
 ## Reference website
 ```{cell}
-RCNN for object detection: 
-https://towardsdatascience.com/r-cnn-for-object-detection-a-technical-summary-9e7bfa8a557c
+[RCNN for object detection](https://towardsdatascience.com/r-cnn-for-object-detection-a-technical-summary-9e7bfa8a557c)
 
 RCNN python implementation:
 https://towardsdatascience.com/step-by-step-r-cnn-implementation-from-scratch-in-python-e97101ccde55
