@@ -6,7 +6,7 @@
 ## Data website
 https://www.kaggle.com/kmader/malaria-bounding-boxes
 
-Original data from this website are placed in the [malaria](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/malaria) folder.
+Original data from this website are placed in the [malaria](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/malaria) folder. As the images folder is too large, you can get the data from the data webcite above.
 
 ## Data Process
 For simplicity, we change the multi-classification problem to a binary one and reset the labels with respect to the rules showed below :
