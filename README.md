@@ -42,6 +42,8 @@ Refering to [Region_proposal.ipynb](https://github.com/VanessaYan/STAT-453-Malar
 |1|uninfected|
 |2|infected|
 
+Here, we just use the first 200 samples in train.json for computational efficiency, but still, we get over 12,000 proposed regions.
+
 
 ## Reference website
 [RCNN for object detection](https://towardsdatascience.com/r-cnn-for-object-detection-a-technical-summary-9e7bfa8a557c)
