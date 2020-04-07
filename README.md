@@ -8,6 +8,9 @@ https://www.kaggle.com/kmader/malaria-bounding-boxes
 
 Original data from this website are placed in the [malaria](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/malaria) folder. As the images folder is too large, you can get the data from the data webcite above.
 
+## One sample presentation
+In [example.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/example.ipynb), a sample from train data is presented to show how selective search work, and a resizing progress wil make it better to be presented.
+
 ## Data Process
 For simplicity, we change the multi-classification problem to a binary one and reset the labels with respect to the rules showed below :
 
@@ -21,11 +24,14 @@ Also, reset the 'bounding_box' elements in the dataset to be a key in the dictio
 
 If you  are interested in this part, please refer to the [Process.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/Process.ipynb) and also binary-classified json data in [code](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code) fiolder.
 
-## One sample presentation
-In [example.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/example.ipynb), a sample from train data is presented to show how selective search work, and a resizing progress wil make it better to be presented.
-
 ## Region proposal
-Refers to [Region_proposal.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/Region_proposal.ipynb)
+Refering to [Region_proposal.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/Region_proposal.ipynb), what we did is listed below:
+
+* For each image:
+ - Get regions proposed be selective search algorithm.
+ - Randomly select 2000 regions from the region set above and compute IOU between each of them and the ground true boxes iteratively.
+ - In each iteration, thus, for each true box, append regions whose IOU are greater than **0.85** to wrapped_data with the box's true label to wrapped_label, and the threshold of background is 0.075. As the background regions generated in each iteration is too much, also consider about sample balance, retain the negative regions with length=min{$l_t$,$l_f$}
+
 
 ## Reference website
 [RCNN for object detection](https://towardsdatascience.com/r-cnn-for-object-detection-a-technical-summary-9e7bfa8a557c)
