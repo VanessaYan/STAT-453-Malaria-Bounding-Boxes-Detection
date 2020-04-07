@@ -1,17 +1,19 @@
 # STAT-453-Malaria-Bounding-Boxes-Detection
 
-## Description
+### Description
 (kaggle problem desrciption)
 
-## Data website
+### Data website
 https://www.kaggle.com/kmader/malaria-bounding-boxes
 
 Original data from this website are placed in the [malaria](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/malaria) folder. As the images folder is too large, you can get the data from the data webcite above.
 
-## One sample presentation
+## Preparation
+
+### One sample presentation
 In [example.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/example.ipynb), a sample from train data is presented to show how selective search work, and a resizing progress wil make it better to be presented.
 
-## Data Process
+### Data Process
 For simplicity, we change the multi-classification problem to a binary one and reset the labels with respect to the rules showed below :
 
 |new label| previous label|
@@ -24,7 +26,7 @@ Also, reset the 'bounding_box' elements in the dataset to be a key in the dictio
 
 If you  are interested in this part, please refer to the [Process.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/Process.ipynb) and also binary-classified json data in [code](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code) fiolder.
 
-## Region proposal
+### Region proposal
 Refering to [Region_proposal.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/Region_proposal.ipynb), what we did is listed below:
 
 * For each image:
@@ -44,6 +46,7 @@ Refering to [Region_proposal.ipynb](https://github.com/VanessaYan/STAT-453-Malar
 
 Here, we just use the first 200 samples in train.json for computational efficiency, but still, we get over 12,000 proposed regions.
 
+## R-CNN model
 
 ## Reference website
 [RCNN for object detection](https://towardsdatascience.com/r-cnn-for-object-detection-a-technical-summary-9e7bfa8a557c)
