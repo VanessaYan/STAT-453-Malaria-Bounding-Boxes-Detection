@@ -30,7 +30,17 @@ Refering to [Region_proposal.ipynb](https://github.com/VanessaYan/STAT-453-Malar
 * For each image:
  - Get regions proposed be selective search algorithm.
  - Randomly select 2000 regions from the region set above and compute IOU between each of them and the ground true boxes iteratively.
- - In each iteration, thus, for each true box, append regions whose IOU are greater than **0.85** to wrapped_data with the box's true label to wrapped_label, and the threshold of background is 0.075. As the background regions generated in each iteration is too much, also consider about sample balance, retain the negative regions with length=min{$l_t$,$l_f$}
+ - In each iteration, thus, for each true box, append regions whose IOU are greater than **0.85** to wrapped_data with the box's true label to wrapped_label, and the threshold of background is 0.075. As the background regions generated in each iteration is too much, also consider about sample balance, retain the negative regions with length=min{l_t,l_f}.
+ 
+ * As for CPU limitation, save the wrapped data for each 1000 samples into .npy files.
+ 
+ * Reload the .npy files and merge them together. Save the merged data into new files for later use. At the mean time, save another label set in one-hot coded form for later use.
+ 
+ |new label| previous label|
+|------|------|
+|0|background|
+|1|uninfected|
+|2|infected|
 
 
 ## Reference website
