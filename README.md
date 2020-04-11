@@ -48,6 +48,12 @@ Here, we just use the first 200 samples in train.json for computational efficien
 
 ## R-CNN model
 
+### Feature extraction: AlexNet model training
+
+### Classification: SVM classification
+
+### Bounding box regression
+
 ## Reference website
 [RCNN for object detection](https://towardsdatascience.com/r-cnn-for-object-detection-a-technical-summary-9e7bfa8a557c)
 
