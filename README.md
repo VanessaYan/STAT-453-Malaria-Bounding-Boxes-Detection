@@ -26,6 +26,8 @@ Also, reset the 'bounding_box' elements in the dataset to be a key in the dictio
 
 If you  are interested in this part, please refer to the [Process.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/Process.ipynb) and also binary-classified json data in [code](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code) fiolder.
 
+## R-CNN model
+
 ### Region proposal
 Refering to [Region_proposal.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/Region_proposal.ipynb), what we did is listed below:
 
@@ -45,8 +47,6 @@ Refering to [Region_proposal.ipynb](https://github.com/VanessaYan/STAT-453-Malar
 |2|infected|
 
 Here, we just use the first 200 samples in train.json for computational efficiency, but still, we get over 12,000 proposed regions.
-
-## R-CNN model
 
 ### Feature extraction: AlexNet model training
 
