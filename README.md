@@ -81,11 +81,8 @@ For each image:
 - Compute t_x,t_y,t_w,t_h based on G,P, and restore them into T.csv
 - Extract features from regions by AlexNet and save them into phi.npy.
 
-#### 2. Fit ridge regression models
+##### 2. Fit ridge regression models
 
-
-
-##### 2. Regression:
 
 ## Reference website
 [RCNN for object detection](https://towardsdatascience.com/r-cnn-for-object-detection-a-technical-summary-9e7bfa8a557c)
