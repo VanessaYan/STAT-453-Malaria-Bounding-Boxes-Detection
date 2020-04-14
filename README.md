@@ -29,14 +29,14 @@ If you  are interested in this part, please refer to the [Process.ipynb](https:/
 ## R-CNN model
 
 ### Region proposal
-* For each image:
+##### 1. For each image:
  - Get regions proposed be selective search algorithm.
  - Randomly select 2000 regions from the region set above and compute IOU between each of them and the ground true boxes iteratively.
  - In each iteration, thus, for each true box, append regions whose IOU are greater than **0.85** to wrapped_data with the box's true label to wrapped_label, and the threshold of background is 0.075. As the background regions generated in each iteration is too much, also consider about sample balance, retain the negative regions with length=min{l_t,l_f}.
  
- * As for CPU limitation, save the wrapped data for each 1000 samples into .npy files.
+##### 2. As for CPU limitation, save the wrapped data for each 1000 samples into .npy files.
  
- * Reload the .npy files and merge them together. Save the merged data into new files for later use. At the mean time, save another label set in one-hot coded form for later use.
+##### 3. Reload the .npy files and merge them together. Save the merged data into new files for later use. At the mean time, save another label set in one-hot coded form for later use.
  
  |new label| previous label|
 |------|------|
@@ -48,18 +48,18 @@ Here, we just use the first 200 samples in train.json for computational efficien
 
 ### Feature extraction: AlexNet model training
 
-#### Download a pre-trained AlexNet model.
-#### Standardize the feature data saved in X.npy to satisfy the input command of AlexNet model.
-#### Hyper-parameters:
+##### 1. Download a pre-trained AlexNet model.
+##### 2. Standardize the feature data saved in X.npy to satisfy the input command of AlexNet model.
+##### 3. Hyper-parameters:
 - random_seed = 1
 - learning_rate = 0.001
 - num_epochs = 25
 - batch_size = 128
 - optimizer: Adam
-#### Model training:
+##### 5. Model training:
 In this progress, as limited to CPU memory and performance on both trainning and validation dataset, stop training when finish the 10th epoch.
-#### Calculate accuracy on test dataset.
-#### Remove the classifier layers of model, and save it as a feature extraction neural network.
+##### 6. Calculate accuracy on test dataset.
+##### 7. Remove the classifier layers of model, and save it as a feature extraction neural network.
 
 ### Classification: SVM classification
 
@@ -75,7 +75,7 @@ The 2 classes are severely imbalanced, like listed in the table:
 So for class 2, use a weighted SVM.
 
 ### Bounding box regression
-* Generate dataset for later regression:
+##### 1. Generate dataset for later regression:
 For each image:
 - Get 2000 proposed regions
 - Calculate IoU between each box and region and retain the region with maximized IoU value w.r.t the ground truth box.
@@ -83,7 +83,7 @@ For each image:
 - Transform the 'box' data into \[x,y,w,h\] form.
 - Save G and P cordinates and resized region for later use.
 
-* Regression:
+##### 2. Regression:
 
 ## Reference website
 [RCNN for object detection](https://towardsdatascience.com/r-cnn-for-object-detection-a-technical-summary-9e7bfa8a557c)
