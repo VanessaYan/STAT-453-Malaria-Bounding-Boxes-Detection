@@ -67,7 +67,7 @@ In this progress, as limited to CPU memory and performance on both trainning and
 
 For class 1 and class 0, reset samples with corresponding labels to be 1 and the outhers to be 0, and then fit separate SVM models for each on 5000 sampels.
 
-The 2 classes are sseverely imbalanced, like listed in the table:
+The 2 classes are severely imbalanced, like listed in the table:
 
 ||uninfected|infected|background|
 |------|------|------|------|
