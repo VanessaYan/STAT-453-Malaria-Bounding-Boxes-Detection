@@ -48,18 +48,18 @@ Here, we just use the first 200 samples in train.json for computational efficien
 
 ### Feature extraction: AlexNet model training
 
-* Download a pre-trained AlexNet model.
-* Standardize the feature data saved in X.npy to satisfy the input command of AlexNet model.
-* Hyper-parameters:
+#### Download a pre-trained AlexNet model.
+#### Standardize the feature data saved in X.npy to satisfy the input command of AlexNet model.
+#### Hyper-parameters:
 - random_seed = 1
 - learning_rate = 0.001
 - num_epochs = 25
 - batch_size = 128
 - optimizer: Adam
-* Model training:
+#### Model training:
 In this progress, as limited to CPU memory and performance on both trainning and validation dataset, stop training when finish the 10th epoch.
-* Calculate accuracy on test dataset.
-* Remove the classifier layers of model, and save it as a feature extraction neural network.
+#### Calculate accuracy on test dataset.
+#### Remove the classifier layers of model, and save it as a feature extraction neural network.
 
 ### Classification: SVM classification
 
