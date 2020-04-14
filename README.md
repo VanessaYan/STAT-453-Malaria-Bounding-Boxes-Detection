@@ -78,7 +78,12 @@ For each image:
 - Calculate IoU between each box and region and retain the region with maximized IoU value w.r.t the ground truth box.
 - Delete the sample if IoU is less than threshold=0.85.
 - Transform the 'box' data into \[x,y,w,h\] form.
-- Save G and P cordinates and resized region for later use.
+- Compute t_x,t_y,t_w,t_h based on G,P, and restore them into T.csv
+- Extract features from regions by AlexNet and save them into phi.npy.
+
+#### 2. Fit ridge regression models
+
+
 
 ##### 2. Regression:
 
