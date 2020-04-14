@@ -50,9 +50,42 @@ Here, we just use the first 200 samples in train.json for computational efficien
 
 ### Feature extraction: AlexNet model training
 
+* Download a pre-trained AlexNet model.
+* Standardize the feature data saved in X.npy to satisfy the input command of AlexNet model.
+* Hyper-parameters:
+- random_seed = 1
+- learning_rate = 0.001
+- num_epochs = 25
+- batch_size = 128
+- optimizer: Adam
+* Model training:
+In this progress, as limited to CPU memory and performance on both trainning and validation dataset, stop training when finish the 10th epoch.
+* Calculate accuracy on test dataset.
+* Remove the classifier layers of model, and save it as a feature extraction neural network.
+
 ### Classification: SVM classification
 
+For class 1 and class 0, reset samples with corresponding labels to be 1 and the outhers to be 0, and then fit separate SVM models for each on 5000 sampels.
+
+The 2 classes are sseverely imbalanced, like listed in the table:
+
+||uninfected|infected|background|
+|------|------|------|------|
+|train|1676|459|1765|
+|test|734|31|735|
+
+So for class 2, use a weighted SVM.
+
 ### Bounding box regression
+* Generate dataset for later regression:
+For each image:
+- Get 2000 proposed regions
+- Calculate IoU between each box and region and retain the region with maximized IoU value w.r.t the ground truth box.
+- Delete the sample if IoU is less than threshold=0.85.
+- Transform the 'box' data into \[x,y,w,h\] form.
+- Save G and P cordinates and resized region for later use.
+
+* Regression:
 
 ## Reference website
 [RCNN for object detection](https://towardsdatascience.com/r-cnn-for-object-detection-a-technical-summary-9e7bfa8a557c)
