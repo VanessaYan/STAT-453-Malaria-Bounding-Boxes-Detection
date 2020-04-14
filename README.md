@@ -29,8 +29,6 @@ If you  are interested in this part, please refer to the [Process.ipynb](https:/
 ## R-CNN model
 
 ### Region proposal
-Refering to [Region_proposal.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/Region_proposal.ipynb), what we did is listed below:
-
 * For each image:
  - Get regions proposed be selective search algorithm.
  - Randomly select 2000 regions from the region set above and compute IOU between each of them and the ground true boxes iteratively.
