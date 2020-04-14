@@ -56,10 +56,10 @@ Here, we just use the first 200 samples in train.json for computational efficien
 - num_epochs = 25
 - batch_size = 128
 - optimizer: Adam
-##### 5. Model training:
+##### 4. Model training:
 In this progress, as limited to CPU memory and performance on both trainning and validation dataset, stop training when finish the 10th epoch.
-##### 6. Calculate accuracy on test dataset.
-##### 7. Remove the classifier layers of model, and save it as a feature extraction neural network.
+##### 5. Calculate accuracy on test dataset.
+##### 6. Remove the classifier layers of model, and save it as a feature extraction neural network.
 
 ### Classification: SVM classification
 
