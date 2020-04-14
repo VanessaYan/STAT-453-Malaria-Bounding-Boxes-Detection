@@ -1,4 +1,4 @@
-Reading order for the ipynb:
+Reading order of the notebooks:
 
 - [Process.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/RCNN/Process.ipynb)
 - [example.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/RCNN/example.ipynb)
