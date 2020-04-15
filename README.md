@@ -35,7 +35,7 @@ If you  are interested in this part, please refer to the [Process.ipynb](https:/
  
 ##### 3. Reload the .npy files and merge them together. Save the merged data into new files for later use. At the mean time, save another label set in one-hot coded form for later use.
  
- |new label| previous label|
+|new label| previous label|
 |------|------|
 |0|background|
 |1|uninfected|
@@ -82,6 +82,11 @@ For each image:
 - Extract features from regions by AlexNet and save them into phi.npy.
 
 ##### 2. Fit ridge regression models
+
+### Object detection
+Reorganize the code and apply object detection on 5 images.
+
+Each progress approximately costs 1 minute and get over 80% accuracy on predicted boxes regions.
 
 
 ## Reference website
