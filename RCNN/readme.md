@@ -11,4 +11,4 @@ Reading order of the notebooks:
 - [SVM.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/RCNN/code/SVM.ipynb): Train 2 separate SVM models for each class.
 - [BBR_dataset_generation.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/RCNN/code/BBR_data_generation.ipynb): Generate data for Bounding box regression use.
 - [Bounding_Box_Regression](https://github.com/VanessaYan/STAT-453-Malaria-BoundingBoxes-Detection/blob/master/RCNN/code/Bounding_Box_Regression.ipynb): Use ridge regression for localization.
-- [Objection_Detection](https://github.com/VanessaYan/STAT-453-Malaria-BoundingBoxes-Detection/blob/master/RCNN/code/Objection_Detection.ipynb): Finalize the progress and choose 5 images as examples.
+- [Objection_Detection]https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/RCNN/code/Objection_Detection.ipynb): Finalize the progress and choose 5 images as examples.
