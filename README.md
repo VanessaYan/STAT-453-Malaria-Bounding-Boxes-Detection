@@ -4,12 +4,7 @@
 https://www.kaggle.com/kmader/malaria-bounding-boxes
 
 
-## Preparation
-
-### One sample presentation
-In [example.ipynb](https://github.com/VanessaYan/STAT-453-Malaria-Bounding-Boxes-Detection/blob/master/code/example.ipynb), a sample from train data is presented to show how selective search work, and a resizing progress wil make it better to be presented.
-
-### Data Process
+## Data Process
 For simplicity, we change the multi-classification problem to a binary one and reset the labels with respect to the rules showed below :
 
 |new label| previous label|
