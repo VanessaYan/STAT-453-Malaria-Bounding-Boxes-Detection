@@ -1,5 +1,0 @@
-The input folder has been changed.
-The detection-results folder contains 120 predicted boxes with labels from 120 test images. The names of the lines are:
-<predicted_label> <score> <x1> <y1> <x2> <y2>
-The ground-truth folder contains 120 true boxes with labels from 120 test images. The names of the lines are:
-<true_label> <x1> <y1> <x2> <y2>
