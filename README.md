@@ -84,6 +84,35 @@ Each progress approximately costs 1 minute and get over 80% accuracy on predicte
 
 ## Faster R-CNN model
 
+### 1. Pretrained model
+- The pretrained model is from torchvision. It is trained using the coco dataset. <br />
+- Change the number of classes to 3 (0-background 1-uninfected 2-infected). <br />
+- Use the pretrained network, containing a backbone network(ResNet) for extracting the feature map, a Region Proposal Network(RPN), a Region of Interest(RoI) pooling, and classifiers(bounding box regression and softmax). <br />
+
+### 2. Training our own model
+- Resize the image to 256x256 along with bounding boxes from the train dataset. <br />
+- The optimization method is SGD. <br />
+- The learning rate is set to be 0.005. <br />
+- Train the model for 10 epoches. <br />
+
+### 3. Evaluation of mAP on test dataset
+#### mAP of all classes
+infected AP = 75.87%  <br />
+uninfected AP = 91.24% <br />
+mAP = 83.56% <br />
+
+#### Number of ground-truth objects per class
+|label| count|
+|------|------|
+|infected|303|
+|uninfected|5614|
+
+
+#### Number of detected objects per class
+|label|True Predictions|False Predictions|total number|
+|------|------|------|------|
+|infected|263|101|364|
+|uninfected|5170|370|5540|
 
 
 ## Reference website
