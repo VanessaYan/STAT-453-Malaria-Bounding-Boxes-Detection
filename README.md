@@ -82,6 +82,9 @@ Reorganize the code and apply object detection on 5 images.
 
 Each progress approximately costs 1 minute and get over 80% accuracy on predicted boxes regions.
 
+## Faster R-CNN model
+
+
 
 ## Reference website
 [RCNN for object detection](https://towardsdatascience.com/r-cnn-for-object-detection-a-technical-summary-9e7bfa8a557c)
@@ -92,3 +95,8 @@ Each progress approximately costs 1 minute and get over 80% accuracy on predicte
 
 [Pytorch RCNN-family implementation_2](https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html)
 
+[TORCHVISION OBJECT DETECTION FINETUNING TUTORIAL](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html#torchvision-object-detection-finetuning-tutorial)
+
+[training fast rcnn using torchvision](https://www.kaggle.com/abhishek/training-fast-rcnn-using-torchvision)
+
+[mean Average Precision ](https://github.com/Cartucho/mAP)
